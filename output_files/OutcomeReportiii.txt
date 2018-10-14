@@ -1,0 +1,3427 @@
+SCOTUS Machine Learning Models Outcome Report iii 
+
+09-04-2018 03:39:19 AM
+
+Features_used: ['decisionType', 'naturalCourt', 'chief', 'jurisdiction', 'adminAction', 'threeJudgeFdc', 'caseOrigin', 'caseSource', 'lcDisagreement', 'certReason', 'lcDisposition', 'lcDispositionDirection', 'issue', 'lawType'] 
+
+Case-based train accuracy: 0.6999540511563792
+
+Case-based test accuracy: 0.6724850711988976
+
+Case-based train AUC: 0.8196154333710498
+
+Case-based test AUC: 0.7425993648755933
+
+Case-based train log-loss: 0.5949839876382812
+
+Case-based test log-loss: 0.62549709752825
+
+Case-based test confusion Matrix: [[639 421]
+ [292 825]]
+
+Based on 1060 conservative test decsions and 1117 liberal ones (0.4869085898024805 conservative):
+Conservatism Precision: 0.686358754027927
+Conservatism Recall: 0.6028301886792453
+Conservatism F1: 0.6418884982420894
+Liberalism Precision: 0.6621187800963082
+Liberalism Recall: 0.738585496866607
+Liberalism F1: 0.6982649174777825Models will be run for 37 justices
+
+09-04-2018 03:39:48 AMRandom Forest Classifier tuned on:
+n-estimators = [50, 250, 500]
+max_depth = [5, 10, 15, 20, 25, 30]
+for the roc_auc metric.
+
+AdaBoost Classifier tuned on:
+alpha = [0.001, 0.01, 0.1]
+n-estimators = [100, 200, 300]
+max_depth = [1, 3, 6]
+for the roc_auc metric.
+
+Support Vector Machine tuned on:
+kernel = [linear, rbf, sigmoid]
+c_value = [1, 5, 10, 25, 50, 75, 100]
+
+************************************************
+
+Model Set 1 - Justice HHBurton
+
+Random Forest Model Results
+
+09-04-2018 03:40:18 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8085742771684945
+
+On default settings, Random Forest accuracy score on test data was 0.5462962962962963
+
+On default settings, Random Forest logloss on training set was 0.5414132939992871
+
+On default settings, Random Forest logloss on test set was 0.6766948311976186
+
+On default settings, Random Forest roc_auc on training set was 0.9770654614775683
+
+On default settings, Random Forest roc_auc on test set was 0.6313111995104039
+
+The best roc_auc score achieved by GridSearchCV was 0.5942173479561316
+It was achieved by setting max depth to 15 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7826520438683948
+
+Once tuned, Random Forest accuracy score on test data was 0.5740740740740741
+
+Once tuned, Random Forest logloss on training set was 0.5442001845495679
+
+Once tuned, Random Forest logloss on test set was 0.678868268731947
+
+Once tuned, Random Forest roc_auc on training set was 0.969961146383625
+
+Once tuned, Random Forest roc_auc on test set was 0.6083805079559363
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 03:40:48 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6879361914257228
+
+On default settings, AdaBoost accuracy score on test data was 0.6018518518518519
+
+On default settings, AdaBoost logloss on training set was 0.6642859075076042
+
+On default settings, AdaBoost logloss on test set was 0.6803434790890344
+
+On default settings, AdaBoost roc_auc on training set was 0.7589581414885538
+
+On default settings, AdaBoost roc_auc on test set was 0.6259944920440637
+
+The best roc_auc score achieved by GridSearchCV was 0.5896398902712773
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6321036889332003
+
+Once tuned, AdaBoost accuracy score on test data was 0.5771604938271605
+
+Once tuned, AdaBoost logloss on training set was 0.6786214170068707
+
+Once tuned, AdaBoost logloss on test set was 0.6870175565495926
+
+Once tuned, AdaBoost roc_auc on training set was 0.7040259131811498
+
+Once tuned, AdaBoost roc_auc on test set was 0.6018206854345166
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 03:43:11 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5861550882874479
+It was achieved by setting C to 75 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7387836490528414
+
+Once tuned, SVM accuracy score on test data was 0.6049382716049383
+
+Once tuned, SVM logloss on training set was 0.5989750017587091
+
+Once tuned, SVM logloss on test set was 0.6688666565325769
+
+Once tuned, SVM roc_auc on training set was 0.8140842339940871
+
+Once tuned, SVM roc_auc on test set was 0.6465345777233782
+
+-----------------------------------------
+
+************************************************
+
+Model Set 2 - Justice RHJackson
+
+Random Forest Model Results
+
+09-04-2018 03:43:38 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7906197654941374
+
+On default settings, Random Forest accuracy score on test data was 0.5990338164251208
+
+On default settings, Random Forest logloss on training set was 0.5226479439399834
+
+On default settings, Random Forest logloss on test set was 0.6637625560726904
+
+On default settings, Random Forest roc_auc on training set was 0.990535689309525
+
+On default settings, Random Forest roc_auc on test set was 0.5513746044303798
+
+The best roc_auc score achieved by GridSearchCV was 0.5963149078726968
+It was achieved by setting max depth to 10 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.678391959798995
+
+Once tuned, Random Forest accuracy score on test data was 0.6135265700483091
+
+Once tuned, Random Forest logloss on training set was 0.580040137515803
+
+Once tuned, Random Forest logloss on test set was 0.6591740269319859
+
+Once tuned, Random Forest roc_auc on training set was 0.9460930579514196
+
+Once tuned, Random Forest roc_auc on test set was 0.5875692246835443
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 03:43:57 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7236180904522613
+
+On default settings, AdaBoost accuracy score on test data was 0.6231884057971014
+
+On default settings, AdaBoost logloss on training set was 0.6567202220274964
+
+On default settings, AdaBoost logloss on test set was 0.6811683300476132
+
+On default settings, AdaBoost roc_auc on training set was 0.7918725814723298
+
+On default settings, AdaBoost roc_auc on test set was 0.5661590189873418
+
+The best roc_auc score achieved by GridSearchCV was 0.5407697448376529
+It was achieved by setting learning_rate to 0.01 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6130653266331658
+
+Once tuned, AdaBoost accuracy score on test data was 0.6280193236714976
+
+Once tuned, AdaBoost logloss on training set was 0.6613353465792192
+
+Once tuned, AdaBoost logloss on test set was 0.6670255263547871
+
+Once tuned, AdaBoost roc_auc on training set was 0.6179775280898877
+
+Once tuned, AdaBoost roc_auc on test set was 0.5509790348101266
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 03:44:31 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5746973416230783
+It was achieved by setting C to 5 and kernel type to linear
+
+Once tuned, SVM accuracy score on training data was 0.8710217755443886
+
+Once tuned, SVM accuracy score on test data was 0.5990338164251208
+
+Once tuned, SVM logloss on training set was 0.6470538958154887
+
+Once tuned, SVM logloss on test set was 0.6602030444109808
+
+Once tuned, SVM roc_auc on training set was 0.8996456711268589
+
+Once tuned, SVM roc_auc on test set was 0.5882614715189872
+
+-----------------------------------------
+
+************************************************
+
+Model Set 3 - Justice WODouglas
+
+Random Forest Model Results
+
+09-04-2018 03:45:25 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8347826086956521
+
+On default settings, Random Forest accuracy score on test data was 0.8035902851108765
+
+On default settings, Random Forest logloss on training set was 0.36149473738032234
+
+On default settings, Random Forest logloss on test set was 0.45405510426039686
+
+On default settings, Random Forest roc_auc on training set was 0.9469460606135792
+
+On default settings, Random Forest roc_auc on test set was 0.7286039779495277
+
+The best roc_auc score achieved by GridSearchCV was 0.7840579710144927
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7840579710144927
+
+Once tuned, Random Forest accuracy score on test data was 0.7983104540654699
+
+Once tuned, Random Forest logloss on training set was 0.47249576721096376
+
+Once tuned, Random Forest logloss on test set was 0.47420549907119464
+
+Once tuned, Random Forest roc_auc on training set was 0.8060266223374561
+
+Once tuned, Random Forest roc_auc on test set was 0.7225234771046289
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 03:46:34 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.816304347826087
+
+On default settings, AdaBoost accuracy score on test data was 0.795142555438226
+
+On default settings, AdaBoost logloss on training set was 0.6557904299533384
+
+On default settings, AdaBoost logloss on test set was 0.6656282082875884
+
+On default settings, AdaBoost roc_auc on training set was 0.8126946122641393
+
+On default settings, AdaBoost roc_auc on test set was 0.7300894761627748
+
+The best roc_auc score achieved by GridSearchCV was 0.5986924536962375
+It was achieved by setting learning_rate to 0.001 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.7840579710144927
+
+Once tuned, AdaBoost accuracy score on test data was 0.7983104540654699
+
+Once tuned, AdaBoost logloss on training set was 0.508192159990507
+
+Once tuned, AdaBoost logloss on test set was 0.5012279573845939
+
+Once tuned, AdaBoost roc_auc on training set was 0.6671459607487997
+
+Once tuned, AdaBoost roc_auc on test set was 0.6225518712429706
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 03:58:38 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5746752843975239
+It was achieved by setting C to 1 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7840579710144927
+
+Once tuned, SVM accuracy score on test data was 0.7983104540654699
+
+Once tuned, SVM logloss on training set was 0.4765433824844877
+
+Once tuned, SVM logloss on test set was 0.48120336837352323
+
+Once tuned, SVM roc_auc on training set was 0.8441179024674663
+
+Once tuned, SVM roc_auc on test set was 0.701889249009668
+
+-----------------------------------------
+
+************************************************
+
+Model Set 4 - Justice FFrankfurter
+
+Random Forest Model Results
+
+09-04-2018 03:59:15 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8508500772797527
+
+On default settings, Random Forest accuracy score on test data was 0.5971896955503513
+
+On default settings, Random Forest logloss on training set was 0.5425920073270801
+
+On default settings, Random Forest logloss on test set was 0.6670810263131506
+
+On default settings, Random Forest roc_auc on training set was 0.9498543297244283
+
+On default settings, Random Forest roc_auc on test set was 0.6521066491112575
+
+The best roc_auc score achieved by GridSearchCV was 0.5865533230293664
+It was achieved by setting max depth to 15 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.8686244204018547
+
+Once tuned, Random Forest accuracy score on test data was 0.6182669789227166
+
+Once tuned, Random Forest logloss on training set was 0.5420274608310527
+
+Once tuned, Random Forest logloss on test set was 0.6652590129151649
+
+Once tuned, Random Forest roc_auc on training set was 0.9566666987173323
+
+Once tuned, Random Forest roc_auc on test set was 0.6645271011630458
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 03:59:53 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6676970633693973
+
+On default settings, AdaBoost accuracy score on test data was 0.6159250585480094
+
+On default settings, AdaBoost logloss on training set was 0.6763984435329227
+
+On default settings, AdaBoost logloss on test set was 0.6896378458142756
+
+On default settings, AdaBoost roc_auc on training set was 0.748871415934309
+
+On default settings, AdaBoost roc_auc on test set was 0.6392253675663814
+
+The best roc_auc score achieved by GridSearchCV was 0.585112961075229
+It was achieved by setting learning_rate to 0.001 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.5633693972179289
+
+Once tuned, AdaBoost accuracy score on test data was 0.522248243559719
+
+Once tuned, AdaBoost logloss on training set was 0.678688549413392
+
+Once tuned, AdaBoost logloss on test set was 0.6897084330223753
+
+Once tuned, AdaBoost roc_auc on training set was 0.5944044345301052
+
+Once tuned, AdaBoost roc_auc on test set was 0.544810182137371
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:04:12 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5989867477330344
+It was achieved by setting C to 75 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7272024729520865
+
+Once tuned, SVM accuracy score on test data was 0.6159250585480094
+
+Once tuned, SVM logloss on training set was 0.6005128489238925
+
+Once tuned, SVM logloss on test set was 0.6684144755740974
+
+Once tuned, SVM roc_auc on training set was 0.8114182900328841
+
+Once tuned, SVM roc_auc on test set was 0.6359995611147685
+
+-----------------------------------------
+
+************************************************
+
+Model Set 5 - Justice SFReed
+
+Random Forest Model Results
+
+09-04-2018 04:04:43 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8897058823529411
+
+On default settings, Random Forest accuracy score on test data was 0.6133828996282528
+
+On default settings, Random Forest logloss on training set was 0.5230757641487833
+
+On default settings, Random Forest logloss on test set was 0.6682086893568854
+
+On default settings, Random Forest roc_auc on training set was 0.9838381939052795
+
+On default settings, Random Forest roc_auc on test set was 0.63524453809471
+
+The best roc_auc score achieved by GridSearchCV was 0.5514705882352942
+It was achieved by setting max depth to 15 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.8860294117647058
+
+Once tuned, Random Forest accuracy score on test data was 0.5836431226765799
+
+Once tuned, Random Forest logloss on training set was 0.51883001925421
+
+Once tuned, Random Forest logloss on test set was 0.6691771198626908
+
+Once tuned, Random Forest roc_auc on training set was 0.9920752862965838
+
+Once tuned, Random Forest roc_auc on test set was 0.6346900299434401
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:05:10 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6924019607843137
+
+On default settings, AdaBoost accuracy score on test data was 0.620817843866171
+
+On default settings, AdaBoost logloss on training set was 0.6585178098431302
+
+On default settings, AdaBoost logloss on test set was 0.6780567798605608
+
+On default settings, AdaBoost roc_auc on training set was 0.7746839819487576
+
+On default settings, AdaBoost roc_auc on test set was 0.6568703559942333
+
+The best roc_auc score achieved by GridSearchCV was 0.5502717391304347
+It was achieved by setting learning_rate to 0.1 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.7904411764705882
+
+Once tuned, AdaBoost accuracy score on test data was 0.6394052044609665
+
+Once tuned, AdaBoost logloss on training set was 0.6813383348355975
+
+Once tuned, AdaBoost logloss on test set was 0.6877153654994406
+
+Once tuned, AdaBoost roc_auc on training set was 0.8953258443322981
+
+Once tuned, AdaBoost roc_auc on test set was 0.6641066873683042
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:06:26 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5995365877329193
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7316176470588235
+
+Once tuned, SVM accuracy score on test data was 0.6059479553903345
+
+Once tuned, SVM logloss on training set was 0.5892713522153618
+
+Once tuned, SVM logloss on test set was 0.650177512654929
+
+Once tuned, SVM roc_auc on training set was 0.8146684539984472
+
+Once tuned, SVM roc_auc on test set was 0.6705944327381613
+
+-----------------------------------------
+
+************************************************
+
+Model Set 6 - Justice HLBlack
+
+Random Forest Model Results
+
+09-04-2018 04:07:14 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8006756756756757
+
+On default settings, Random Forest accuracy score on test data was 0.7586206896551724
+
+On default settings, Random Forest logloss on training set was 0.42997286537233614
+
+On default settings, Random Forest logloss on test set was 0.5118575320140919
+
+On default settings, Random Forest roc_auc on training set was 0.9441199643968302
+
+On default settings, Random Forest roc_auc on test set was 0.7479697731274897
+
+The best roc_auc score achieved by GridSearchCV was 0.7267736486486487
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7280405405405406
+
+Once tuned, Random Forest accuracy score on test data was 0.7445721583652618
+
+Once tuned, Random Forest logloss on training set was 0.5424499330024151
+
+Once tuned, Random Forest logloss on test set was 0.5437656402023585
+
+Once tuned, Random Forest roc_auc on training set was 0.7820381470217304
+
+Once tuned, Random Forest roc_auc on test set was 0.7074122514574892
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:08:04 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7884290540540541
+
+On default settings, AdaBoost accuracy score on test data was 0.7662835249042146
+
+On default settings, AdaBoost logloss on training set was 0.6640899810762727
+
+On default settings, AdaBoost logloss on test set was 0.6679916470715279
+
+On default settings, AdaBoost roc_auc on training set was 0.7974742544802
+
+On default settings, AdaBoost roc_auc on test set was 0.7319502145629243
+
+The best roc_auc score achieved by GridSearchCV was 0.455904307081811
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.7571790540540541
+
+Once tuned, AdaBoost accuracy score on test data was 0.7675606641123882
+
+Once tuned, AdaBoost logloss on training set was 0.6550592284719724
+
+Once tuned, AdaBoost logloss on test set was 0.6568093257738021
+
+Once tuned, AdaBoost roc_auc on training set was 0.7556055720932817
+
+Once tuned, AdaBoost roc_auc on test set was 0.7148877605101639
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:17:44 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5316520098129753
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7930743243243243
+
+Once tuned, SVM accuracy score on test data was 0.7662835249042146
+
+Once tuned, SVM logloss on training set was 0.44791149826714943
+
+Once tuned, SVM logloss on test set was 0.5030889651196463
+
+Once tuned, SVM roc_auc on training set was 0.8320519956867458
+
+Once tuned, SVM roc_auc on test set was 0.7242481749328956
+
+-----------------------------------------
+
+************************************************
+
+Model Set 7 - Justice WBRutledge
+
+Random Forest Model Results
+
+09-04-2018 04:18:07 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8884758364312267
+
+On default settings, Random Forest accuracy score on test data was 0.7474747474747475
+
+On default settings, Random Forest logloss on training set was 0.2765861884935195
+
+On default settings, Random Forest logloss on test set was 0.5697336816836236
+
+On default settings, Random Forest roc_auc on training set was 0.9992679919864386
+
+On default settings, Random Forest roc_auc on test set was 0.6006322444678609
+
+The best roc_auc score achieved by GridSearchCV was 0.7657992565055762
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7657992565055762
+
+Once tuned, Random Forest accuracy score on test data was 0.7373737373737373
+
+Once tuned, Random Forest logloss on training set was 0.45438351949365785
+
+Once tuned, Random Forest logloss on test set was 0.5737855732420282
+
+Once tuned, Random Forest roc_auc on training set was 0.9564262598243181
+
+Once tuned, Random Forest roc_auc on test set was 0.5974710221285564
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:18:21 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.9070631970260223
+
+On default settings, AdaBoost accuracy score on test data was 0.6868686868686869
+
+On default settings, AdaBoost logloss on training set was 0.582456030562076
+
+On default settings, AdaBoost logloss on test set was 0.6630488759293808
+
+On default settings, AdaBoost roc_auc on training set was 0.9597010325165665
+
+On default settings, AdaBoost roc_auc on test set was 0.5948366701791359
+
+The best roc_auc score achieved by GridSearchCV was 0.6759314706723409
+It was achieved by setting learning_rate to 0.01 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.7769516728624535
+
+Once tuned, AdaBoost accuracy score on test data was 0.7373737373737373
+
+Once tuned, AdaBoost logloss on training set was 0.5529537532584453
+
+Once tuned, AdaBoost logloss on test set was 0.5946271742815163
+
+Once tuned, AdaBoost roc_auc on training set was 0.8311373092926491
+
+Once tuned, AdaBoost roc_auc on test set was 0.6051106427818757
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:18:24 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.619612609127151
+It was achieved by setting C to 5 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7657992565055762
+
+Once tuned, SVM accuracy score on test data was 0.7373737373737373
+
+Once tuned, SVM logloss on training set was 0.42525676504495863
+
+Once tuned, SVM logloss on test set was 0.5870140976602299
+
+Once tuned, SVM roc_auc on training set was 0.8977115117891817
+
+Once tuned, SVM roc_auc on test set was 0.5489989462592202
+
+-----------------------------------------
+
+************************************************
+
+Model Set 8 - Justice FMurphy
+
+Random Forest Model Results
+
+09-04-2018 04:18:47 AM
+
+On default settings, Random Forest accuracy score on training data was 0.9283018867924528
+
+On default settings, Random Forest accuracy score on test data was 0.6666666666666666
+
+On default settings, Random Forest logloss on training set was 0.24201355442006445
+
+On default settings, Random Forest logloss on test set was 0.6613383316243461
+
+On default settings, Random Forest roc_auc on training set was 0.997863978127136
+
+On default settings, Random Forest roc_auc on test set was 0.6411910669975187
+
+The best roc_auc score achieved by GridSearchCV was 0.7886792452830189
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7886792452830189
+
+Once tuned, Random Forest accuracy score on test data was 0.6770833333333334
+
+Once tuned, Random Forest logloss on training set was 0.4215248424860854
+
+Once tuned, Random Forest logloss on test set was 0.652906112180189
+
+Once tuned, Random Forest roc_auc on training set was 0.9527511961722489
+
+Once tuned, Random Forest roc_auc on test set was 0.6238213399503723
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:19:00 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.909433962264151
+
+On default settings, AdaBoost accuracy score on test data was 0.6458333333333334
+
+On default settings, AdaBoost logloss on training set was 0.6020573236265333
+
+On default settings, AdaBoost logloss on test set was 0.637378695098758
+
+On default settings, AdaBoost roc_auc on training set was 0.967746069719754
+
+On default settings, AdaBoost roc_auc on test set was 0.709181141439206
+
+The best roc_auc score achieved by GridSearchCV was 0.6744565153607517
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.8679245283018868
+
+Once tuned, AdaBoost accuracy score on test data was 0.6875
+
+Once tuned, AdaBoost logloss on training set was 0.5979207163578962
+
+Once tuned, AdaBoost logloss on test set was 0.6314186642751415
+
+Once tuned, AdaBoost roc_auc on training set was 0.9252819548872181
+
+Once tuned, AdaBoost roc_auc on test set was 0.6838709677419355
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:19:03 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6780931777371791
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.8679245283018868
+
+Once tuned, SVM accuracy score on test data was 0.65625
+
+Once tuned, SVM logloss on training set was 0.3981639903769077
+
+Once tuned, SVM logloss on test set was 0.6346083097340781
+
+Once tuned, SVM roc_auc on training set was 0.9404477101845523
+
+Once tuned, SVM roc_auc on test set was 0.6789081885856081
+
+-----------------------------------------
+
+************************************************
+
+Model Set 9 - Justice FMVinson
+
+Random Forest Model Results
+
+09-04-2018 04:19:30 AM
+
+On default settings, Random Forest accuracy score on training data was 0.9071428571428571
+
+On default settings, Random Forest accuracy score on test data was 0.5594059405940595
+
+On default settings, Random Forest logloss on training set was 0.492003788447867
+
+On default settings, Random Forest logloss on test set was 0.6852960321857988
+
+On default settings, Random Forest roc_auc on training set was 0.99110354697714
+
+On default settings, Random Forest roc_auc on test set was 0.5581039755351681
+
+The best roc_auc score achieved by GridSearchCV was 0.5857142857142857
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.6303571428571428
+
+Once tuned, Random Forest accuracy score on test data was 0.5693069306930693
+
+Once tuned, Random Forest logloss on training set was 0.6391169619825509
+
+Once tuned, Random Forest logloss on test set was 0.6829392400628369
+
+Once tuned, Random Forest roc_auc on training set was 0.829690944958032
+
+Once tuned, Random Forest roc_auc on test set was 0.5538620893755549
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:19:52 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7321428571428571
+
+On default settings, AdaBoost accuracy score on test data was 0.6039603960396039
+
+On default settings, AdaBoost logloss on training set was 0.6559751189841364
+
+On default settings, AdaBoost logloss on test set was 0.6924285520837864
+
+On default settings, AdaBoost roc_auc on training set was 0.8221676401191351
+
+On default settings, AdaBoost roc_auc on test set was 0.608217421327809
+
+The best roc_auc score achieved by GridSearchCV was 0.5544552941298333
+It was achieved by setting learning_rate to 0.1 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.825
+
+Once tuned, AdaBoost accuracy score on test data was 0.5792079207920792
+
+Once tuned, AdaBoost logloss on training set was 0.677780119839913
+
+Once tuned, AdaBoost logloss on test set was 0.6902025492388748
+
+Once tuned, AdaBoost roc_auc on training set was 0.9247347180855865
+
+Once tuned, AdaBoost roc_auc on test set was 0.5705336884679886
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:20:21 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6019416115758282
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7196428571428571
+
+Once tuned, SVM accuracy score on test data was 0.6089108910891089
+
+Once tuned, SVM logloss on training set was 0.5771192272383455
+
+Once tuned, SVM logloss on test set was 0.6723478596606357
+
+Once tuned, SVM roc_auc on training set was 0.8285563248623627
+
+Once tuned, SVM roc_auc on test set was 0.6036795896221762
+
+-----------------------------------------
+
+************************************************
+
+Model Set 10 - Justice TCClark
+
+Random Forest Model Results
+
+09-04-2018 04:21:02 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8585485854858549
+
+On default settings, Random Forest accuracy score on test data was 0.6363636363636364
+
+On default settings, Random Forest logloss on training set was 0.5368406458913974
+
+On default settings, Random Forest logloss on test set was 0.6408113766223669
+
+On default settings, Random Forest roc_auc on training set was 0.9592274939080284
+
+On default settings, Random Forest roc_auc on test set was 0.6926807970151623
+
+The best roc_auc score achieved by GridSearchCV was 0.5977859778597786
+It was achieved by setting max depth to 15 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.8456334563345633
+
+Once tuned, Random Forest accuracy score on test data was 0.6264822134387352
+
+Once tuned, Random Forest logloss on training set was 0.5380038736995906
+
+Once tuned, Random Forest logloss on test set was 0.641471729221478
+
+Once tuned, Random Forest roc_auc on training set was 0.9645426726844046
+
+Once tuned, Random Forest roc_auc on test set was 0.6982853060252441
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:21:47 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7023370233702337
+
+On default settings, AdaBoost accuracy score on test data was 0.6225296442687747
+
+On default settings, AdaBoost logloss on training set was 0.6731084117839975
+
+On default settings, AdaBoost logloss on test set was 0.68499283602231
+
+On default settings, AdaBoost roc_auc on training set was 0.7844414919896083
+
+On default settings, AdaBoost roc_auc on test set was 0.674636818290069
+
+The best roc_auc score achieved by GridSearchCV was 0.606555672676776
+It was achieved by setting learning_rate to 0.1 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.7466174661746617
+
+Once tuned, AdaBoost accuracy score on test data was 0.6383399209486166
+
+Once tuned, AdaBoost logloss on training set was 0.6857052983207068
+
+Once tuned, AdaBoost logloss on test set was 0.6898369736332255
+
+Once tuned, AdaBoost roc_auc on training set was 0.8473921192764728
+
+Once tuned, AdaBoost roc_auc on test set was 0.6724537588314679
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:27:55 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6414757919628932
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7798277982779828
+
+Once tuned, SVM accuracy score on test data was 0.6482213438735178
+
+Once tuned, SVM logloss on training set was 0.5093715502807318
+
+Once tuned, SVM logloss on test set was 0.63137050966498
+
+Once tuned, SVM roc_auc on training set was 0.8568405659187058
+
+Once tuned, SVM roc_auc on test set was 0.692410891482099
+
+-----------------------------------------
+
+************************************************
+
+Model Set 11 - Justice SMinton
+
+Random Forest Model Results
+
+09-04-2018 04:28:22 AM
+
+On default settings, Random Forest accuracy score on training data was 0.9141716566866267
+
+On default settings, Random Forest accuracy score on test data was 0.5923566878980892
+
+On default settings, Random Forest logloss on training set was 0.4844129196190218
+
+On default settings, Random Forest logloss on test set was 0.6723605476865929
+
+On default settings, Random Forest roc_auc on training set was 0.9924778761061946
+
+On default settings, Random Forest roc_auc on test set was 0.6344967532467533
+
+The best roc_auc score achieved by GridSearchCV was 0.5668662674650699
+It was achieved by setting max depth to 15 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.9201596806387226
+
+Once tuned, Random Forest accuracy score on test data was 0.6114649681528662
+
+Once tuned, Random Forest logloss on training set was 0.48310021819376475
+
+Once tuned, Random Forest logloss on test set was 0.6711525378675279
+
+Once tuned, Random Forest roc_auc on training set was 0.9979324215607402
+
+Once tuned, Random Forest roc_auc on test set was 0.6174512987012987
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:28:41 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7684630738522954
+
+On default settings, AdaBoost accuracy score on test data was 0.5987261146496815
+
+On default settings, AdaBoost logloss on training set was 0.636799987858675
+
+On default settings, AdaBoost logloss on test set was 0.7133547011937923
+
+On default settings, AdaBoost roc_auc on training set was 0.8561544650040225
+
+On default settings, AdaBoost roc_auc on test set was 0.6170454545454546
+
+The best roc_auc score achieved by GridSearchCV was 0.6077037142247883
+It was achieved by setting learning_rate to 0.1 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.8223552894211577
+
+Once tuned, AdaBoost accuracy score on test data was 0.6050955414012739
+
+Once tuned, AdaBoost logloss on training set was 0.669597069952155
+
+Once tuned, AdaBoost logloss on test set was 0.691813999740617
+
+Once tuned, AdaBoost roc_auc on training set was 0.9134030571198712
+
+Once tuned, AdaBoost roc_auc on test set was 0.5892857142857143
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:29:01 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6393369316466452
+It was achieved by setting C to 1 and kernel type to linear
+
+Once tuned, SVM accuracy score on training data was 0.872255489021956
+
+Once tuned, SVM accuracy score on test data was 0.6369426751592356
+
+Once tuned, SVM logloss on training set was 0.5166433898132904
+
+Once tuned, SVM logloss on test set was 0.6483975184130409
+
+Once tuned, SVM roc_auc on training set was 0.9284553499597747
+
+Once tuned, SVM roc_auc on test set was 0.6773538961038962
+
+-----------------------------------------
+
+************************************************
+
+Model Set 12 - Justice EWarren
+
+Random Forest Model Results
+
+09-04-2018 04:29:44 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8139825218476904
+
+On default settings, Random Forest accuracy score on test data was 0.7771084337349398
+
+On default settings, Random Forest logloss on training set was 0.3950764490662901
+
+On default settings, Random Forest logloss on test set was 0.4953314606977914
+
+On default settings, Random Forest roc_auc on training set was 0.9543566225509462
+
+On default settings, Random Forest roc_auc on test set was 0.73932963588136
+
+The best roc_auc score achieved by GridSearchCV was 0.7784019975031211
+It was achieved by setting max depth to 25 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.8938826466916354
+
+Once tuned, Random Forest accuracy score on test data was 0.7751004016064257
+
+Once tuned, Random Forest logloss on training set was 0.2842182556597283
+
+Once tuned, Random Forest logloss on test set was 0.4752809967212541
+
+Once tuned, Random Forest roc_auc on training set was 0.9954659031436269
+
+Once tuned, Random Forest roc_auc on test set was 0.7652629502159283
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:30:24 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7983770287141073
+
+On default settings, AdaBoost accuracy score on test data was 0.7811244979919679
+
+On default settings, AdaBoost logloss on training set was 0.6551656749859698
+
+On default settings, AdaBoost logloss on test set was 0.6598805165940714
+
+On default settings, AdaBoost roc_auc on training set was 0.8185526323827987
+
+On default settings, AdaBoost roc_auc on test set was 0.7198960913694455
+
+The best roc_auc score achieved by GridSearchCV was 0.659652706866894
+It was achieved by setting learning_rate to 0.01 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.7734082397003745
+
+Once tuned, AdaBoost accuracy score on test data was 0.785140562248996
+
+Once tuned, AdaBoost logloss on training set was 0.6019966778310863
+
+Once tuned, AdaBoost logloss on test set was 0.597989643943007
+
+Once tuned, AdaBoost roc_auc on training set was 0.7227266895696426
+
+Once tuned, AdaBoost roc_auc on test set was 0.6791218186202513
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:34:21 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6546253019130844
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.8121098626716604
+
+Once tuned, SVM accuracy score on test data was 0.7771084337349398
+
+Once tuned, SVM logloss on training set was 0.42165077715613525
+
+Once tuned, SVM logloss on test set was 0.49913274025573773
+
+Once tuned, SVM roc_auc on training set was 0.8720983511079161
+
+Once tuned, SVM roc_auc on test set was 0.7235679680820747
+
+-----------------------------------------
+
+************************************************
+
+Model Set 13 - Justice JHarlan2
+
+Random Forest Model Results
+
+09-04-2018 04:35:02 AM
+
+On default settings, Random Forest accuracy score on training data was 0.769927536231884
+
+On default settings, Random Forest accuracy score on test data was 0.5692883895131086
+
+On default settings, Random Forest logloss on training set was 0.547421135664395
+
+On default settings, Random Forest logloss on test set was 0.6671149057318166
+
+On default settings, Random Forest roc_auc on training set was 0.9471668462643679
+
+On default settings, Random Forest roc_auc on test set was 0.6485365956668028
+
+The best roc_auc score achieved by GridSearchCV was 0.5893719806763285
+It was achieved by setting max depth to 10 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.6654589371980676
+
+Once tuned, Random Forest accuracy score on test data was 0.548689138576779
+
+Once tuned, Random Forest logloss on training set was 0.6020205940042652
+
+Once tuned, Random Forest logloss on test set was 0.6748565923759517
+
+Once tuned, Random Forest roc_auc on training set was 0.8677247964559387
+
+Once tuned, Random Forest roc_auc on test set was 0.6385060464854364
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:35:40 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6606280193236715
+
+On default settings, AdaBoost accuracy score on test data was 0.5973782771535581
+
+On default settings, AdaBoost logloss on training set was 0.6777644665319722
+
+On default settings, AdaBoost logloss on test set was 0.6905088077240233
+
+On default settings, AdaBoost roc_auc on training set was 0.7363034303160919
+
+On default settings, AdaBoost roc_auc on test set was 0.6268002196162347
+
+The best roc_auc score achieved by GridSearchCV was 0.5979136733716475
+It was achieved by setting learning_rate to 0.01 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.5972222222222222
+
+Once tuned, AdaBoost accuracy score on test data was 0.5449438202247191
+
+Once tuned, AdaBoost logloss on training set was 0.6647904987023894
+
+Once tuned, AdaBoost logloss on test set was 0.6824357590719998
+
+Once tuned, AdaBoost roc_auc on training set was 0.6299307052203066
+
+Once tuned, AdaBoost roc_auc on test set was 0.5835104810440217
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 04:42:38 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5700670498084291
+It was achieved by setting C to 10 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6026570048309179
+
+Once tuned, SVM accuracy score on test data was 0.548689138576779
+
+Once tuned, SVM logloss on training set was 0.6222800683407564
+
+Once tuned, SVM logloss on test set was 0.6733200310165349
+
+Once tuned, SVM roc_auc on training set was 0.7415798611111111
+
+Once tuned, SVM roc_auc on test set was 0.6318964424985569
+
+-----------------------------------------
+
+************************************************
+
+Model Set 14 - Justice WJBrennan
+
+Random Forest Model Results
+
+09-04-2018 04:43:58 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7703800786369593
+
+On default settings, Random Forest accuracy score on test data was 0.7382075471698113
+
+On default settings, Random Forest logloss on training set was 0.4615306886715296
+
+On default settings, Random Forest logloss on test set was 0.5450609776217579
+
+On default settings, Random Forest roc_auc on training set was 0.9127755273429509
+
+On default settings, Random Forest roc_auc on test set was 0.717407628560055
+
+The best roc_auc score achieved by GridSearchCV was 0.7507208387942332
+It was achieved by setting max depth to 25 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.8479685452162516
+
+Once tuned, Random Forest accuracy score on test data was 0.7507861635220126
+
+Once tuned, Random Forest logloss on training set was 0.34773040687783785
+
+Once tuned, Random Forest logloss on test set was 0.5298980197548563
+
+Once tuned, Random Forest roc_auc on training set was 0.98889841382914
+
+Once tuned, Random Forest roc_auc on test set was 0.7316508643047563
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 04:45:21 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7688073394495413
+
+On default settings, AdaBoost accuracy score on test data was 0.7476415094339622
+
+On default settings, AdaBoost logloss on training set was 0.676012293118914
+
+On default settings, AdaBoost logloss on test set was 0.6821325080543383
+
+On default settings, AdaBoost roc_auc on training set was 0.7672824003922666
+
+On default settings, AdaBoost roc_auc on test set was 0.6762491103632131
+
+The best roc_auc score achieved by GridSearchCV was 0.6986533071135691
+It was achieved by setting learning_rate to 0.1 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.7585845347313237
+
+Once tuned, AdaBoost accuracy score on test data was 0.7382075471698113
+
+Once tuned, AdaBoost logloss on training set was 0.6789080917071251
+
+Once tuned, AdaBoost logloss on test set was 0.6814788985011224
+
+Once tuned, AdaBoost roc_auc on training set was 0.7709369254431949
+
+Once tuned, AdaBoost roc_auc on test set was 0.6838064994752651
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 05:17:57 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6844626808809661
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7554390563564876
+
+Once tuned, SVM accuracy score on test data was 0.7374213836477987
+
+Once tuned, SVM logloss on training set was 0.5051301285282569
+
+Once tuned, SVM logloss on test set was 0.5575376243548752
+
+Once tuned, SVM roc_auc on training set was 0.8246542346073277
+
+Once tuned, SVM roc_auc on test set was 0.6899389618692626
+
+-----------------------------------------
+
+************************************************
+
+Model Set 15 - Justice CEWhittaker
+
+Random Forest Model Results
+
+09-04-2018 05:18:23 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8721649484536083
+
+On default settings, Random Forest accuracy score on test data was 0.5448717948717948
+
+On default settings, Random Forest logloss on training set was 0.48963451807387176
+
+On default settings, Random Forest logloss on test set was 0.6830182652579487
+
+On default settings, Random Forest roc_auc on training set was 0.9877985281866148
+
+On default settings, Random Forest roc_auc on test set was 0.5700082850041425
+
+The best roc_auc score achieved by GridSearchCV was 0.5938144329896907
+It was achieved by setting max depth to 25 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.9896907216494846
+
+Once tuned, Random Forest accuracy score on test data was 0.5833333333333334
+
+Once tuned, Random Forest logloss on training set was 0.3573145217335836
+
+Once tuned, Random Forest logloss on test set was 0.687121998685161
+
+Once tuned, Random Forest roc_auc on training set was 0.9992536795334629
+
+Once tuned, Random Forest roc_auc on test set was 0.5855840927920464
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 05:18:42 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7628865979381443
+
+On default settings, AdaBoost accuracy score on test data was 0.5833333333333334
+
+On default settings, AdaBoost logloss on training set was 0.6318491201046929
+
+On default settings, AdaBoost logloss on test set was 0.6853693803164748
+
+On default settings, AdaBoost roc_auc on training set was 0.8361479450152735
+
+On default settings, AdaBoost roc_auc on test set was 0.5795360397680199
+
+The best roc_auc score achieved by GridSearchCV was 0.5895885236831001
+It was achieved by setting learning_rate to 0.1 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.797938144329897
+
+Once tuned, AdaBoost accuracy score on test data was 0.5961538461538461
+
+Once tuned, AdaBoost logloss on training set was 0.6684217235500687
+
+Once tuned, AdaBoost logloss on test set was 0.6856484642280599
+
+Once tuned, AdaBoost roc_auc on training set was 0.9120990697028604
+
+Once tuned, AdaBoost roc_auc on test set was 0.6111019055509528
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 05:19:02 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5848803407857643
+It was achieved by setting C to 100 and kernel type to linear
+
+Once tuned, SVM accuracy score on training data was 0.9360824742268041
+
+Once tuned, SVM accuracy score on test data was 0.5705128205128205
+
+Once tuned, SVM logloss on training set was 0.6300521313992005
+
+Once tuned, SVM logloss on test set was 0.6738660303160472
+
+Once tuned, SVM roc_auc on training set was 0.9477922799222439
+
+Once tuned, SVM roc_auc on test set was 0.6263463131731567
+
+-----------------------------------------
+
+************************************************
+
+Model Set 16 - Justice PStewart
+
+Random Forest Model Results
+
+09-04-2018 05:19:56 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7716966379984362
+
+On default settings, Random Forest accuracy score on test data was 0.6463834672789897
+
+On default settings, Random Forest logloss on training set was 0.5521293848977511
+
+On default settings, Random Forest logloss on test set was 0.638029042077224
+
+On default settings, Random Forest roc_auc on training set was 0.8903949183045691
+
+On default settings, Random Forest roc_auc on test set was 0.6998723841396255
+
+The best roc_auc score achieved by GridSearchCV was 0.552384675527756
+It was achieved by setting max depth to 5 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.6583268178264269
+
+Once tuned, Random Forest accuracy score on test data was 0.6475315729047072
+
+Once tuned, Random Forest logloss on training set was 0.65645296319435
+
+Once tuned, Random Forest logloss on test set was 0.6643746615906762
+
+Once tuned, Random Forest roc_auc on training set was 0.7427067693993026
+
+Once tuned, Random Forest roc_auc on test set was 0.690581843599085
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 05:20:51 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6712275215011728
+
+On default settings, AdaBoost accuracy score on test data was 0.6521239954075775
+
+On default settings, AdaBoost logloss on training set was 0.6849335293278463
+
+On default settings, AdaBoost logloss on test set was 0.6878175946313728
+
+On default settings, AdaBoost roc_auc on training set was 0.7367192963580612
+
+On default settings, AdaBoost roc_auc on test set was 0.6708410997204101
+
+The best roc_auc score achieved by GridSearchCV was 0.6049932022480745
+It was achieved by setting learning_rate to 0.001 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6008600469116497
+
+Once tuned, AdaBoost accuracy score on test data was 0.6463834672789897
+
+Once tuned, AdaBoost logloss on training set was 0.671250296327149
+
+Once tuned, AdaBoost logloss on test set was 0.6562363519819013
+
+Once tuned, AdaBoost roc_auc on training set was 0.6011448608414556
+
+Once tuned, AdaBoost roc_auc on test set was 0.6398823392357875
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 05:37:30 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6286242994045292
+It was achieved by setting C to 10 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6239249413604379
+
+Once tuned, SVM accuracy score on test data was 0.6486796785304249
+
+Once tuned, SVM logloss on training set was 0.640882104943314
+
+Once tuned, SVM logloss on test set was 0.6442004308626512
+
+Once tuned, SVM roc_auc on training set was 0.7357971356471813
+
+Once tuned, SVM roc_auc on test set was 0.6794538464797086
+
+-----------------------------------------
+
+************************************************
+
+Model Set 17 - Justice BRWhite
+
+Random Forest Model Results
+
+09-04-2018 05:38:36 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7546047038821195
+
+On default settings, Random Forest accuracy score on test data was 0.6715017064846417
+
+On default settings, Random Forest logloss on training set was 0.5496213087619075
+
+On default settings, Random Forest logloss on test set was 0.6182617486188369
+
+On default settings, Random Forest roc_auc on training set was 0.8725539059738423
+
+On default settings, Random Forest roc_auc on test set was 0.7361397680247129
+
+The best roc_auc score achieved by GridSearchCV was 0.5463304052139416
+It was achieved by setting max depth to 10 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.701898554831397
+
+Once tuned, Random Forest accuracy score on test data was 0.6655290102389079
+
+Once tuned, Random Forest logloss on training set was 0.6076380828522837
+
+Once tuned, Random Forest logloss on test set was 0.6343623000601759
+
+Once tuned, Random Forest roc_auc on training set was 0.8067349529226517
+
+Once tuned, Random Forest roc_auc on test set was 0.7294398787666841
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 05:39:48 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6863134032303769
+
+On default settings, AdaBoost accuracy score on test data was 0.6672354948805461
+
+On default settings, AdaBoost logloss on training set was 0.6853183256049684
+
+On default settings, AdaBoost logloss on test set was 0.6883217366213296
+
+On default settings, AdaBoost roc_auc on training set was 0.7524444872907228
+
+On default settings, AdaBoost roc_auc on test set was 0.7093737250101999
+
+The best roc_auc score achieved by GridSearchCV was 0.6041678846101788
+It was achieved by setting learning_rate to 0.001 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.621422499291584
+
+Once tuned, AdaBoost accuracy score on test data was 0.6493174061433447
+
+Once tuned, AdaBoost logloss on training set was 0.662174001339355
+
+Once tuned, AdaBoost logloss on test set was 0.6488707098918568
+
+Once tuned, AdaBoost roc_auc on training set was 0.6226797133583984
+
+Once tuned, AdaBoost roc_auc on test set was 0.6503846826368247
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:10:30 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6163936334667708
+It was achieved by setting C to 5 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6389912156418249
+
+Once tuned, SVM accuracy score on test data was 0.6578498293515358
+
+Once tuned, SVM logloss on training set was 0.6386178351530669
+
+Once tuned, SVM logloss on test set was 0.632320091131735
+
+Once tuned, SVM roc_auc on training set was 0.7304921430637231
+
+Once tuned, SVM roc_auc on test set was 0.7111383108935129
+
+-----------------------------------------
+
+************************************************
+
+Model Set 18 - Justice AJGoldberg
+
+Random Forest Model Results
+
+09-04-2018 06:10:56 AM
+
+On default settings, Random Forest accuracy score on training data was 0.9454545454545454
+
+On default settings, Random Forest accuracy score on test data was 0.8363636363636363
+
+On default settings, Random Forest logloss on training set was 0.23061959094920373
+
+On default settings, Random Forest logloss on test set was 0.41672411412592847
+
+On default settings, Random Forest roc_auc on training set was 0.9990656963021243
+
+On default settings, Random Forest roc_auc on test set was 0.7766116941529236
+
+The best roc_auc score achieved by GridSearchCV was 0.806060606060606
+It was achieved by setting max depth to 15 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.9515151515151515
+
+Once tuned, Random Forest accuracy score on test data was 0.8272727272727273
+
+Once tuned, Random Forest logloss on training set was 0.23087484657523227
+
+Once tuned, Random Forest logloss on test set was 0.4246871732151034
+
+Once tuned, Random Forest roc_auc on training set was 0.9992623918174666
+
+Once tuned, Random Forest roc_auc on test set was 0.7706146926536732
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:11:13 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.8878787878787879
+
+On default settings, AdaBoost accuracy score on test data was 0.8272727272727273
+
+On default settings, AdaBoost logloss on training set was 0.6314982945841026
+
+On default settings, AdaBoost logloss on test set was 0.6460319686058554
+
+On default settings, AdaBoost roc_auc on training set was 0.9723642800944139
+
+On default settings, AdaBoost roc_auc on test set was 0.7483758120939531
+
+The best roc_auc score achieved by GridSearchCV was 0.8035711958292604
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.8242424242424242
+
+Once tuned, AdaBoost accuracy score on test data was 0.8
+
+Once tuned, AdaBoost logloss on training set was 0.5908918777218402
+
+Once tuned, AdaBoost logloss on test set was 0.5975459254616134
+
+Once tuned, AdaBoost roc_auc on training set was 0.8964152242328874
+
+Once tuned, AdaBoost roc_auc on test set was 0.7596201899050475
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:11:18 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.7945740818321462
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.8636363636363636
+
+Once tuned, SVM accuracy score on test data was 0.8272727272727273
+
+Once tuned, SVM logloss on training set was 0.345290076448831
+
+Once tuned, SVM logloss on test set was 0.4337069898666129
+
+Once tuned, SVM roc_auc on training set was 0.9174370574350904
+
+Once tuned, SVM roc_auc on test set was 0.7606196901549226
+
+-----------------------------------------
+
+************************************************
+
+Model Set 19 - Justice AFortas
+
+Random Forest Model Results
+
+09-04-2018 06:11:42 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8927680798004988
+
+On default settings, Random Forest accuracy score on test data was 0.7983870967741935
+
+On default settings, Random Forest logloss on training set was 0.3053194721032125
+
+On default settings, Random Forest logloss on test set was 0.5091742701803316
+
+On default settings, Random Forest roc_auc on training set was 0.994423504695996
+
+On default settings, Random Forest roc_auc on test set was 0.7039627039627039
+
+The best roc_auc score achieved by GridSearchCV was 0.773067331670823
+It was achieved by setting max depth to 25 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.9675810473815462
+
+Once tuned, Random Forest accuracy score on test data was 0.7983870967741935
+
+Once tuned, Random Forest logloss on training set was 0.1940400476044208
+
+Once tuned, Random Forest logloss on test set was 0.48862229117694544
+
+Once tuned, Random Forest roc_auc on training set was 0.9996756055363322
+
+Once tuned, Random Forest roc_auc on test set was 0.7332667332667333
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:11:59 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.8628428927680798
+
+On default settings, AdaBoost accuracy score on test data was 0.7661290322580645
+
+On default settings, AdaBoost logloss on training set was 0.6038294644506388
+
+On default settings, AdaBoost logloss on test set was 0.6496298302557956
+
+On default settings, AdaBoost roc_auc on training set was 0.9341633712308453
+
+On default settings, AdaBoost roc_auc on test set was 0.6771561771561772
+
+The best roc_auc score achieved by GridSearchCV was 0.6858945604568706
+It was achieved by setting learning_rate to 0.1 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.9052369077306733
+
+Once tuned, AdaBoost accuracy score on test data was 0.7419354838709677
+
+Once tuned, AdaBoost logloss on training set was 0.6459235219384197
+
+Once tuned, AdaBoost logloss on test set was 0.6680059724984753
+
+Once tuned, AdaBoost roc_auc on training set was 0.9664792387543253
+
+Once tuned, AdaBoost roc_auc on test set was 0.6405261405261405
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:12:07 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.7219458488481991
+It was achieved by setting C to 25 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7980049875311721
+
+Once tuned, SVM accuracy score on test data was 0.7741935483870968
+
+Once tuned, SVM logloss on training set was 0.4246159537575638
+
+Once tuned, SVM logloss on test set was 0.527433442717203
+
+Once tuned, SVM roc_auc on training set was 0.8572200939199209
+
+Once tuned, SVM roc_auc on test set was 0.654012654012654
+
+-----------------------------------------
+
+************************************************
+
+Model Set 20 - Justice TMarshall
+
+Random Forest Model Results
+
+09-04-2018 06:13:09 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7807547169811321
+
+On default settings, Random Forest accuracy score on test data was 0.705749718151071
+
+On default settings, Random Forest logloss on training set was 0.4358962092846024
+
+On default settings, Random Forest logloss on test set was 0.570039440367423
+
+On default settings, Random Forest roc_auc on training set was 0.9540503424224354
+
+On default settings, Random Forest roc_auc on test set was 0.718120685974525
+
+The best roc_auc score achieved by GridSearchCV was 0.7494339622641509
+It was achieved by setting max depth to 25 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.8464150943396226
+
+Once tuned, Random Forest accuracy score on test data was 0.7237880496054115
+
+Once tuned, Random Forest logloss on training set was 0.3233030188199329
+
+Once tuned, Random Forest logloss on test set was 0.5572059093856703
+
+Once tuned, Random Forest roc_auc on training set was 0.9984694891671637
+
+Once tuned, Random Forest roc_auc on test set was 0.7377724803719253
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:14:05 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7724528301886793
+
+On default settings, AdaBoost accuracy score on test data was 0.7294250281848929
+
+On default settings, AdaBoost logloss on training set was 0.6722946251678306
+
+On default settings, AdaBoost logloss on test set was 0.6830086404081837
+
+On default settings, AdaBoost roc_auc on training set was 0.7662293778572847
+
+On default settings, AdaBoost roc_auc on test set was 0.692381816456747
+
+The best roc_auc score achieved by GridSearchCV was 0.6718821927323277
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.7562264150943396
+
+Once tuned, AdaBoost accuracy score on test data was 0.7091319052987599
+
+Once tuned, AdaBoost logloss on training set was 0.6571748085213154
+
+Once tuned, AdaBoost logloss on test set was 0.6656939320641606
+
+Once tuned, AdaBoost roc_auc on training set was 0.7243262680471982
+
+Once tuned, AdaBoost roc_auc on test set was 0.6806227614506984
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:29:17 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6575367991843498
+It was achieved by setting C to 75 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7660377358490567
+
+Once tuned, SVM accuracy score on test data was 0.7158962795941376
+
+Once tuned, SVM logloss on training set was 0.4844712469646103
+
+Once tuned, SVM logloss on test set was 0.5749058156002986
+
+Once tuned, SVM roc_auc on training set was 0.83525234455467
+
+Once tuned, SVM roc_auc on test set was 0.6933454303944591
+
+-----------------------------------------
+
+************************************************
+
+Model Set 21 - Justice WEBurger
+
+Random Forest Model Results
+
+09-04-2018 06:30:08 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7594810379241517
+
+On default settings, Random Forest accuracy score on test data was 0.6656976744186046
+
+On default settings, Random Forest logloss on training set was 0.4929412699411411
+
+On default settings, Random Forest logloss on test set was 0.5862803002140374
+
+On default settings, Random Forest roc_auc on training set was 0.9118575839684637
+
+On default settings, Random Forest roc_auc on test set was 0.7359411846303231
+
+The best roc_auc score achieved by GridSearchCV was 0.6731536926147704
+It was achieved by setting max depth to 25 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.8972055888223552
+
+Once tuned, Random Forest accuracy score on test data was 0.7020348837209303
+
+Once tuned, Random Forest logloss on training set was 0.373990099145993
+
+Once tuned, Random Forest logloss on test set was 0.5740807319069602
+
+Once tuned, Random Forest roc_auc on training set was 0.989445823711831
+
+Once tuned, Random Forest roc_auc on test set was 0.7416932538031165
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:31:02 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7125748502994012
+
+On default settings, AdaBoost accuracy score on test data was 0.6715116279069767
+
+On default settings, AdaBoost logloss on training set was 0.6758884692993854
+
+On default settings, AdaBoost logloss on test set was 0.6828704694487653
+
+On default settings, AdaBoost roc_auc on training set was 0.7701317422816643
+
+On default settings, AdaBoost roc_auc on test set was 0.6961298377028713
+
+The best roc_auc score achieved by GridSearchCV was 0.6754322216957396
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6676646706586826
+
+Once tuned, AdaBoost accuracy score on test data was 0.6482558139534884
+
+Once tuned, AdaBoost logloss on training set was 0.6607928469999739
+
+Once tuned, AdaBoost logloss on test set was 0.6630936238257525
+
+Once tuned, AdaBoost roc_auc on training set was 0.7081881765640224
+
+Once tuned, AdaBoost roc_auc on test set was 0.7010588616081749
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:39:53 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6839164555594814
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7435129740518962
+
+Once tuned, SVM accuracy score on test data was 0.6744186046511628
+
+Once tuned, SVM logloss on training set was 0.5183552968199442
+
+Once tuned, SVM logloss on test set was 0.5922279617723488
+
+Once tuned, SVM roc_auc on training set was 0.8119018540023224
+
+Once tuned, SVM roc_auc on test set was 0.7076154806491884
+
+-----------------------------------------
+
+************************************************
+
+Model Set 22 - Justice HABlackmun
+
+Random Forest Model Results
+
+09-04-2018 06:40:48 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7853128512551517
+
+On default settings, Random Forest accuracy score on test data was 0.6647982062780269
+
+On default settings, Random Forest logloss on training set was 0.5260294512713165
+
+On default settings, Random Forest logloss on test set was 0.6296533830446147
+
+On default settings, Random Forest roc_auc on training set was 0.9072592766900818
+
+On default settings, Random Forest roc_auc on test set was 0.7102085344272846
+
+The best roc_auc score achieved by GridSearchCV was 0.5496440614462346
+It was achieved by setting max depth to 10 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7174971899587861
+
+Once tuned, Random Forest accuracy score on test data was 0.6535874439461884
+
+Once tuned, Random Forest logloss on training set was 0.5998973924402983
+
+Once tuned, Random Forest logloss on test set was 0.6430779474970986
+
+Once tuned, Random Forest roc_auc on training set was 0.8161930695466056
+
+Once tuned, Random Forest roc_auc on test set was 0.7068955115830116
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:41:44 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6849007118771075
+
+On default settings, AdaBoost accuracy score on test data was 0.6547085201793722
+
+On default settings, AdaBoost logloss on training set was 0.6812445478034342
+
+On default settings, AdaBoost logloss on test set was 0.6884734890751929
+
+On default settings, AdaBoost roc_auc on training set was 0.755771437128378
+
+On default settings, AdaBoost roc_auc on test set was 0.6899684282496783
+
+The best roc_auc score achieved by GridSearchCV was 0.6161108025002718
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6579243162233046
+
+Once tuned, AdaBoost accuracy score on test data was 0.6412556053811659
+
+Once tuned, AdaBoost logloss on training set was 0.6810791685763338
+
+Once tuned, AdaBoost logloss on test set was 0.6848716105494497
+
+Once tuned, AdaBoost roc_auc on training set was 0.718729135399086
+
+Once tuned, AdaBoost roc_auc on test set was 0.6830558236808236
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 06:58:25 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.5938144000983681
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7452229299363057
+
+Once tuned, SVM accuracy score on test data was 0.6434977578475336
+
+Once tuned, SVM logloss on training set was 0.5539330438683904
+
+Once tuned, SVM logloss on test set was 0.6353091269219018
+
+Once tuned, SVM roc_auc on training set was 0.8180108583183118
+
+Once tuned, SVM roc_auc on test set was 0.6951264880952381
+
+-----------------------------------------
+
+************************************************
+
+Model Set 23 - Justice LFPowell
+
+Random Forest Model Results
+
+09-04-2018 06:59:18 AM
+
+On default settings, Random Forest accuracy score on training data was 0.799660441426146
+
+On default settings, Random Forest accuracy score on test data was 0.6574675324675324
+
+On default settings, Random Forest logloss on training set was 0.5244864527335127
+
+On default settings, Random Forest logloss on test set was 0.6197926160614871
+
+On default settings, Random Forest roc_auc on training set was 0.8998452491488704
+
+On default settings, Random Forest roc_auc on test set was 0.6994561634805537
+
+The best roc_auc score achieved by GridSearchCV was 0.631578947368421
+It was achieved by setting max depth to 25 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.8986983588002264
+
+Once tuned, Random Forest accuracy score on test data was 0.6493506493506493
+
+Once tuned, Random Forest logloss on training set was 0.4080284721693833
+
+Once tuned, Random Forest logloss on test set was 0.620811563464804
+
+Once tuned, Random Forest roc_auc on training set was 0.9805807866725875
+
+Once tuned, Random Forest roc_auc on test set was 0.6862173148758515
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 06:59:59 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6910016977928692
+
+On default settings, AdaBoost accuracy score on test data was 0.6607142857142857
+
+On default settings, AdaBoost logloss on training set was 0.6775052350754582
+
+On default settings, AdaBoost logloss on test set was 0.6877228847559723
+
+On default settings, AdaBoost roc_auc on training set was 0.7323557116520663
+
+On default settings, AdaBoost roc_auc on test set was 0.657058888156449
+
+The best roc_auc score achieved by GridSearchCV was 0.6378452614027468
+It was achieved by setting learning_rate to 0.01 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6372382569326542
+
+Once tuned, AdaBoost accuracy score on test data was 0.6525974025974026
+
+Once tuned, AdaBoost logloss on training set was 0.6430013987114422
+
+Once tuned, AdaBoost logloss on test set was 0.6412187370087108
+
+Once tuned, AdaBoost roc_auc on training set was 0.6420525345498095
+
+Once tuned, AdaBoost roc_auc on test set was 0.6508349813227862
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 07:07:58 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6464816718855915
+It was achieved by setting C to 25 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6559139784946236
+
+Once tuned, SVM accuracy score on test data was 0.663961038961039
+
+Once tuned, SVM logloss on training set was 0.6055490800988665
+
+Once tuned, SVM logloss on test set was 0.6226959576898836
+
+Once tuned, SVM roc_auc on training set was 0.7538183090441779
+
+Once tuned, SVM roc_auc on test set was 0.6862997143484949
+
+-----------------------------------------
+
+************************************************
+
+Model Set 24 - Justice WHRehnquist
+
+Random Forest Model Results
+
+09-04-2018 07:09:01 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7465880893300249
+
+On default settings, Random Forest accuracy score on test data was 0.7137546468401487
+
+On default settings, Random Forest logloss on training set was 0.47388547329084
+
+On default settings, Random Forest logloss on test set was 0.55680001281846
+
+On default settings, Random Forest roc_auc on training set was 0.9217022650205023
+
+On default settings, Random Forest roc_auc on test set was 0.712643654230513
+
+The best roc_auc score achieved by GridSearchCV was 0.6991315136476427
+It was achieved by setting max depth to 5 and n_estimators to 50
+
+Once tuned, Random Forest accuracy score on training data was 0.7028535980148883
+
+Once tuned, Random Forest accuracy score on test data was 0.7063197026022305
+
+Once tuned, Random Forest logloss on training set was 0.5737796817503695
+
+Once tuned, Random Forest logloss on test set was 0.5785893377122037
+
+Once tuned, Random Forest roc_auc on training set was 0.7479841093806431
+
+Once tuned, Random Forest roc_auc on test set was 0.6903730846102598
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 07:10:08 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7400744416873449
+
+On default settings, AdaBoost accuracy score on test data was 0.7137546468401487
+
+On default settings, AdaBoost logloss on training set was 0.6772688465135014
+
+On default settings, AdaBoost logloss on test set was 0.6808765441759252
+
+On default settings, AdaBoost roc_auc on training set was 0.7589202104077986
+
+On default settings, AdaBoost roc_auc on test set was 0.7157020319786809
+
+The best roc_auc score achieved by GridSearchCV was 0.5531810796756849
+It was achieved by setting learning_rate to 0.001 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6982009925558312
+
+Once tuned, AdaBoost accuracy score on test data was 0.7063197026022305
+
+Once tuned, AdaBoost logloss on training set was 0.5962273837608921
+
+Once tuned, AdaBoost logloss on test set was 0.5786184395683964
+
+Once tuned, AdaBoost roc_auc on training set was 0.5981263095127757
+
+Once tuned, AdaBoost roc_auc on test set was 0.6335776149233845
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 07:32:28 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.563756126048331
+It was achieved by setting C to 5 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6982009925558312
+
+Once tuned, SVM accuracy score on test data was 0.7063197026022305
+
+Once tuned, SVM logloss on training set was 0.5644659089564295
+
+Once tuned, SVM logloss on test set was 0.5922685926613371
+
+Once tuned, SVM roc_auc on training set was 0.800596331971676
+
+Once tuned, SVM roc_auc on test set was 0.7025420552964691
+
+-----------------------------------------
+
+************************************************
+
+Model Set 25 - Justice JPStevens
+
+Random Forest Model Results
+
+09-04-2018 07:33:29 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7388429752066116
+
+On default settings, Random Forest accuracy score on test data was 0.6257545271629779
+
+On default settings, Random Forest logloss on training set was 0.5454825897353023
+
+On default settings, Random Forest logloss on test set was 0.6397329239224363
+
+On default settings, Random Forest roc_auc on training set was 0.9165603595380404
+
+On default settings, Random Forest roc_auc on test set was 0.6628449811752051
+
+The best roc_auc score achieved by GridSearchCV was 0.6115702479338843
+It was achieved by setting max depth to 5 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.6191735537190083
+
+Once tuned, Random Forest accuracy score on test data was 0.60261569416499
+
+Once tuned, Random Forest logloss on training set was 0.6440055455240213
+
+Once tuned, Random Forest logloss on test set was 0.6586694293130025
+
+Once tuned, Random Forest roc_auc on training set was 0.7308301212084554
+
+Once tuned, Random Forest roc_auc on test set was 0.6582627403522925
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 07:34:45 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6743801652892562
+
+On default settings, AdaBoost accuracy score on test data was 0.6257545271629779
+
+On default settings, AdaBoost logloss on training set was 0.6836112247455984
+
+On default settings, AdaBoost logloss on test set was 0.6891334267103001
+
+On default settings, AdaBoost roc_auc on training set was 0.7047383653262804
+
+On default settings, AdaBoost roc_auc on test set was 0.6356561785666264
+
+The best roc_auc score achieved by GridSearchCV was 0.48543670775946574
+It was achieved by setting learning_rate to 0.1 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6892561983471074
+
+Once tuned, AdaBoost accuracy score on test data was 0.6398390342052314
+
+Once tuned, AdaBoost logloss on training set was 0.6886402773409026
+
+Once tuned, AdaBoost logloss on test set was 0.6906895266309158
+
+Once tuned, AdaBoost roc_auc on training set was 0.7513219658020964
+
+Once tuned, AdaBoost roc_auc on test set was 0.6420200517681861
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 07:58:13 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.48678727130250027
+It was achieved by setting C to 1 and kernel type to linear
+
+Once tuned, SVM accuracy score on training data was 0.7209917355371901
+
+Once tuned, SVM accuracy score on test data was 0.6327967806841046
+
+Once tuned, SVM logloss on training set was 0.6013217798279606
+
+Once tuned, SVM logloss on test set was 0.6527240527097564
+
+Once tuned, SVM roc_auc on training set was 0.7785530866641373
+
+Once tuned, SVM roc_auc on test set was 0.6299814273228453
+
+-----------------------------------------
+
+************************************************
+
+Model Set 26 - Justice SDOConnor
+
+Random Forest Model Results
+
+09-04-2018 07:59:03 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8136792452830188
+
+On default settings, Random Forest accuracy score on test data was 0.668141592920354
+
+On default settings, Random Forest logloss on training set was 0.5266662138355945
+
+On default settings, Random Forest logloss on test set was 0.606924519769718
+
+On default settings, Random Forest roc_auc on training set was 0.9088936941964286
+
+On default settings, Random Forest roc_auc on test set was 0.6944515396622677
+
+The best roc_auc score achieved by GridSearchCV was 0.6037735849056604
+It was achieved by setting max depth to 25 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.930188679245283
+
+Once tuned, Random Forest accuracy score on test data was 0.6814159292035398
+
+Once tuned, Random Forest logloss on training set was 0.4094633718996658
+
+Once tuned, Random Forest logloss on test set was 0.6000329213914073
+
+Once tuned, Random Forest roc_auc on training set was 0.9836518787202382
+
+Once tuned, Random Forest roc_auc on test set was 0.6957192185800104
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 07:59:50 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6825471698113208
+
+On default settings, AdaBoost accuracy score on test data was 0.668141592920354
+
+On default settings, AdaBoost logloss on training set was 0.6785890178541373
+
+On default settings, AdaBoost logloss on test set was 0.6798064049484259
+
+On default settings, AdaBoost roc_auc on training set was 0.7398111979166667
+
+On default settings, AdaBoost roc_auc on test set was 0.6833262381155102
+
+The best roc_auc score achieved by GridSearchCV was 0.6273270089285714
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6584905660377358
+
+Once tuned, AdaBoost accuracy score on test data was 0.6637168141592921
+
+Once tuned, AdaBoost logloss on training set was 0.6759873903710355
+
+Once tuned, AdaBoost logloss on test set was 0.6756028035541036
+
+Once tuned, AdaBoost roc_auc on training set was 0.7154180617559522
+
+Once tuned, AdaBoost roc_auc on test set was 0.6967551203821958
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 08:52:40 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6440755208333333
+It was achieved by setting C to 1 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6037735849056604
+
+Once tuned, SVM accuracy score on test data was 0.6415929203539823
+
+Once tuned, SVM logloss on training set was 0.6194019249190167
+
+Once tuned, SVM logloss on test set was 0.6198143397781535
+
+Once tuned, SVM roc_auc on training set was 0.7153362165178572
+
+Once tuned, SVM roc_auc on test set was 0.6666240953597276
+
+-----------------------------------------
+
+************************************************
+
+Model Set 27 - Justice AScalia
+
+Random Forest Model Results
+
+09-04-2018 08:53:33 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7792207792207793
+
+On default settings, Random Forest accuracy score on test data was 0.6628242074927954
+
+On default settings, Random Forest logloss on training set was 0.4903014850226231
+
+On default settings, Random Forest logloss on test set was 0.5958342117139127
+
+On default settings, Random Forest roc_auc on training set was 0.9489271753352135
+
+On default settings, Random Forest roc_auc on test set was 0.6942908742444346
+
+The best roc_auc score achieved by GridSearchCV was 0.645021645021645
+It was achieved by setting max depth to 5 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.6430976430976431
+
+Once tuned, Random Forest accuracy score on test data was 0.6570605187319885
+
+Once tuned, Random Forest logloss on training set was 0.6125139830923793
+
+Once tuned, Random Forest logloss on test set was 0.6199184409702359
+
+Once tuned, Random Forest roc_auc on training set was 0.777435502502888
+
+Once tuned, Random Forest roc_auc on test set was 0.6847265221878225
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 08:54:33 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6974506974506974
+
+On default settings, AdaBoost accuracy score on test data was 0.6757925072046109
+
+On default settings, AdaBoost logloss on training set was 0.6689518383778535
+
+On default settings, AdaBoost logloss on test set was 0.6805887892327093
+
+On default settings, AdaBoost roc_auc on training set was 0.7608371116894845
+
+On default settings, AdaBoost roc_auc on test set was 0.6955900781365179
+
+The best roc_auc score achieved by GridSearchCV was 0.649007993928168
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6503126503126503
+
+Once tuned, AdaBoost accuracy score on test data was 0.6685878962536023
+
+Once tuned, AdaBoost logloss on training set was 0.6667348469722465
+
+Once tuned, AdaBoost logloss on test set was 0.6667053202851522
+
+Once tuned, AdaBoost roc_auc on training set was 0.7060452354408127
+
+Once tuned, AdaBoost roc_auc on test set was 0.6904024767801858
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:05:49 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6532361881858844
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7575757575757576
+
+Once tuned, SVM accuracy score on test data was 0.6714697406340058
+
+Once tuned, SVM logloss on training set was 0.5389003426484673
+
+Once tuned, SVM logloss on test set was 0.602942635913709
+
+Once tuned, SVM roc_auc on training set was 0.8208489658829056
+
+Once tuned, SVM roc_auc on test set was 0.671467271118974
+
+-----------------------------------------
+
+************************************************
+
+Model Set 28 - Justice AMKennedy
+
+Random Forest Model Results
+
+09-04-2018 09:06:38 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8366650414431984
+
+On default settings, Random Forest accuracy score on test data was 0.6262773722627737
+
+On default settings, Random Forest logloss on training set was 0.5245497962995762
+
+On default settings, Random Forest logloss on test set was 0.6271211382978207
+
+On default settings, Random Forest roc_auc on training set was 0.9086255262195454
+
+On default settings, Random Forest roc_auc on test set was 0.678984850101355
+
+The best roc_auc score achieved by GridSearchCV was 0.636274987810824
+It was achieved by setting max depth to 15 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.8439785470502194
+
+Once tuned, Random Forest accuracy score on test data was 0.6233576642335766
+
+Once tuned, Random Forest logloss on training set was 0.5273961320098519
+
+Once tuned, Random Forest logloss on test set was 0.6294946605454209
+
+Once tuned, Random Forest roc_auc on training set was 0.915156095587148
+
+Once tuned, Random Forest roc_auc on test set was 0.6728057541164338
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:07:35 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.681618722574354
+
+On default settings, AdaBoost accuracy score on test data was 0.5956204379562043
+
+On default settings, AdaBoost logloss on training set was 0.6787624478919259
+
+On default settings, AdaBoost logloss on test set was 0.6895558424055133
+
+On default settings, AdaBoost roc_auc on training set was 0.7490672004731113
+
+On default settings, AdaBoost roc_auc on test set was 0.6098856644973151
+
+The best roc_auc score achieved by GridSearchCV was 0.6247912488031843
+It was achieved by setting learning_rate to 0.001 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6196977084349098
+
+Once tuned, AdaBoost accuracy score on test data was 0.6043795620437956
+
+Once tuned, AdaBoost logloss on training set was 0.6538097793197443
+
+Once tuned, AdaBoost logloss on test set was 0.6532835585747689
+
+Once tuned, AdaBoost roc_auc on training set was 0.6241206978390955
+
+Once tuned, AdaBoost roc_auc on test set was 0.6099434546036487
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:18:37 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6668007747956677
+It was achieved by setting C to 25 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6762554851292053
+
+Once tuned, SVM accuracy score on test data was 0.6248175182481752
+
+Once tuned, SVM logloss on training set was 0.5956005723410474
+
+Once tuned, SVM logloss on test set was 0.6421363298113822
+
+Once tuned, SVM roc_auc on training set was 0.7567975698578332
+
+Once tuned, SVM roc_auc on test set was 0.6467779793022512
+
+-----------------------------------------
+
+************************************************
+
+Model Set 29 - Justice DHSouter
+
+Random Forest Model Results
+
+09-04-2018 09:19:19 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8255352894528152
+
+On default settings, Random Forest accuracy score on test data was 0.6363636363636364
+
+On default settings, Random Forest logloss on training set was 0.5107205871042602
+
+On default settings, Random Forest logloss on test set was 0.6296965406763761
+
+On default settings, Random Forest roc_auc on training set was 0.9344926825491056
+
+On default settings, Random Forest roc_auc on test set was 0.7082418547466409
+
+The best roc_auc score achieved by GridSearchCV was 0.619349722442506
+It was achieved by setting max depth to 25 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.929421094369548
+
+Once tuned, Random Forest accuracy score on test data was 0.6410256410256411
+
+Once tuned, Random Forest logloss on training set was 0.38341898022762133
+
+Once tuned, Random Forest logloss on test set was 0.6229877603193741
+
+Once tuned, Random Forest roc_auc on training set was 0.9972498257749788
+
+Once tuned, Random Forest roc_auc on test set was 0.7040923860542724
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:19:56 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7160983346550357
+
+On default settings, AdaBoost accuracy score on test data was 0.6107226107226107
+
+On default settings, AdaBoost logloss on training set was 0.6618851388608418
+
+On default settings, AdaBoost logloss on test set was 0.6898786117527509
+
+On default settings, AdaBoost roc_auc on training set was 0.7744715174354078
+
+On default settings, AdaBoost roc_auc on test set was 0.6328598401686133
+
+The best roc_auc score achieved by GridSearchCV was 0.6072838401303046
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6859635210150674
+
+Once tuned, AdaBoost accuracy score on test data was 0.5920745920745921
+
+Once tuned, AdaBoost logloss on training set was 0.6695865579454394
+
+Once tuned, AdaBoost logloss on test set was 0.6768550213352236
+
+Once tuned, AdaBoost roc_auc on training set was 0.7251542214077382
+
+Once tuned, AdaBoost roc_auc on test set was 0.6699086677790463
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:23:37 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6129129571141847
+It was achieved by setting C to 25 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7145122918318795
+
+Once tuned, SVM accuracy score on test data was 0.6526806526806527
+
+Once tuned, SVM logloss on training set was 0.5910872044444735
+
+Once tuned, SVM logloss on test set was 0.6347376131160776
+
+Once tuned, SVM roc_auc on training set was 0.7638786361407222
+
+Once tuned, SVM roc_auc on test set was 0.7020066742776851
+
+-----------------------------------------
+
+************************************************
+
+Model Set 30 - Justice CThomas
+
+Random Forest Model Results
+
+09-04-2018 09:24:19 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7473118279569892
+
+On default settings, Random Forest accuracy score on test data was 0.6835664335664335
+
+On default settings, Random Forest logloss on training set was 0.47319594849103463
+
+On default settings, Random Forest logloss on test set was 0.5867484373526817
+
+On default settings, Random Forest roc_auc on training set was 0.9515230874806943
+
+On default settings, Random Forest roc_auc on test set was 0.7040167099531407
+
+The best roc_auc score achieved by GridSearchCV was 0.6798088410991637
+It was achieved by setting max depth to 5 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.6792114695340502
+
+Once tuned, Random Forest accuracy score on test data was 0.666083916083916
+
+Once tuned, Random Forest logloss on training set was 0.5884668173244798
+
+Once tuned, Random Forest logloss on test set was 0.613323662099251
+
+Once tuned, Random Forest roc_auc on training set was 0.8006572557728939
+
+Once tuned, Random Forest roc_auc on test set was 0.7023539596817414
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:24:57 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7287933094384708
+
+On default settings, AdaBoost accuracy score on test data was 0.666083916083916
+
+On default settings, AdaBoost logloss on training set was 0.6675130023504007
+
+On default settings, AdaBoost logloss on test set was 0.6810402111371352
+
+On default settings, AdaBoost roc_auc on training set was 0.7730682363500275
+
+On default settings, AdaBoost roc_auc on test set was 0.6798930892800704
+
+The best roc_auc score achieved by GridSearchCV was 0.6325901817065279
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.7007168458781362
+
+Once tuned, AdaBoost accuracy score on test data was 0.6748251748251748
+
+Once tuned, AdaBoost logloss on training set was 0.6648702404866897
+
+Once tuned, AdaBoost logloss on test set was 0.670445661370871
+
+Once tuned, AdaBoost roc_auc on training set was 0.7313751598918387
+
+Once tuned, AdaBoost roc_auc on test set was 0.6941570130958762
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:31:00 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.621589883870045
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7514934289127837
+
+Once tuned, SVM accuracy score on test data was 0.6958041958041958
+
+Once tuned, SVM logloss on training set was 0.5314857132844862
+
+Once tuned, SVM logloss on test set was 0.5940009050665251
+
+Once tuned, SVM roc_auc on training set was 0.8324964090872612
+
+Once tuned, SVM roc_auc on test set was 0.6884816753926701
+
+-----------------------------------------
+
+************************************************
+
+Model Set 31 - Justice RBGinsburg
+
+Random Forest Model Results
+
+09-04-2018 09:31:39 AM
+
+On default settings, Random Forest accuracy score on training data was 0.7625661375661376
+
+On default settings, Random Forest accuracy score on test data was 0.6346153846153846
+
+On default settings, Random Forest logloss on training set was 0.5147597089628502
+
+On default settings, Random Forest logloss on test set was 0.6315036155015697
+
+On default settings, Random Forest roc_auc on training set was 0.9316034422679416
+
+On default settings, Random Forest roc_auc on test set was 0.6630009662724888
+
+The best roc_auc score achieved by GridSearchCV was 0.6541005291005291
+It was achieved by setting max depth to 10 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.6917989417989417
+
+Once tuned, Random Forest accuracy score on test data was 0.6384615384615384
+
+Once tuned, Random Forest logloss on training set was 0.5785197140553195
+
+Once tuned, Random Forest logloss on test set was 0.639604859270676
+
+Once tuned, Random Forest roc_auc on training set was 0.867687597947191
+
+Once tuned, Random Forest roc_auc on test set was 0.6600714734888572
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:32:17 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6937830687830688
+
+On default settings, AdaBoost accuracy score on test data was 0.6326923076923077
+
+On default settings, AdaBoost logloss on training set was 0.6650429595695756
+
+On default settings, AdaBoost logloss on test set was 0.685079219094507
+
+On default settings, AdaBoost roc_auc on training set was 0.7502412762005886
+
+On default settings, AdaBoost roc_auc on test set was 0.6416356079080967
+
+The best roc_auc score achieved by GridSearchCV was 0.6481512313158428
+It was achieved by setting learning_rate to 0.01 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.6507936507936508
+
+Once tuned, AdaBoost accuracy score on test data was 0.625
+
+Once tuned, AdaBoost logloss on training set was 0.6613758743935522
+
+Once tuned, AdaBoost logloss on test set was 0.6680110546315177
+
+Once tuned, AdaBoost roc_auc on training set was 0.672989106539178
+
+Once tuned, AdaBoost roc_auc on test set was 0.6306078314084572
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:37:41 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6216229272187958
+It was achieved by setting C to 50 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7215608465608465
+
+Once tuned, SVM accuracy score on test data was 0.6307692307692307
+
+Once tuned, SVM logloss on training set was 0.5770504828870436
+
+Once tuned, SVM logloss on test set was 0.6417232291627267
+
+Once tuned, SVM roc_auc on training set was 0.7843455987389785
+
+Once tuned, SVM roc_auc on test set was 0.6378778815626006
+
+-----------------------------------------
+
+************************************************
+
+Model Set 32 - Justice SGBreyer
+
+Random Forest Model Results
+
+09-04-2018 09:38:32 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8258110014104373
+
+On default settings, Random Forest accuracy score on test data was 0.6244979919678715
+
+On default settings, Random Forest logloss on training set was 0.5154227327304813
+
+On default settings, Random Forest logloss on test set was 0.6371898225993637
+
+On default settings, Random Forest roc_auc on training set was 0.9101822477424539
+
+On default settings, Random Forest roc_auc on test set was 0.6965935710567412
+
+The best roc_auc score achieved by GridSearchCV was 0.6495063469675599
+It was achieved by setting max depth to 25 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.923836389280677
+
+Once tuned, Random Forest accuracy score on test data was 0.6345381526104418
+
+Once tuned, Random Forest logloss on training set was 0.3991985050447576
+
+Once tuned, Random Forest logloss on test set was 0.628946383290077
+
+Once tuned, Random Forest roc_auc on training set was 0.9876766102204064
+
+Once tuned, Random Forest roc_auc on test set was 0.7025800364393545
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:39:09 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.6988716502115656
+
+On default settings, AdaBoost accuracy score on test data was 0.6104417670682731
+
+On default settings, AdaBoost logloss on training set was 0.6674666866171993
+
+On default settings, AdaBoost logloss on test set was 0.6907765229214788
+
+On default settings, AdaBoost roc_auc on training set was 0.7807364197117405
+
+On default settings, AdaBoost roc_auc on test set was 0.640690070275898
+
+The best roc_auc score achieved by GridSearchCV was 0.6405537925073547
+It was achieved by setting learning_rate to 0.1 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6798307475317349
+
+Once tuned, AdaBoost accuracy score on test data was 0.6104417670682731
+
+Once tuned, AdaBoost logloss on training set was 0.671104990992137
+
+Once tuned, AdaBoost logloss on test set was 0.6843021504078317
+
+Once tuned, AdaBoost roc_auc on training set was 0.7446907836916788
+
+Once tuned, AdaBoost roc_auc on test set was 0.643894781363873
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:44:12 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6678642660716596
+It was achieved by setting C to 25 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.7023977433004231
+
+Once tuned, SVM accuracy score on test data was 0.6144578313253012
+
+Once tuned, SVM logloss on training set was 0.5907963318648379
+
+Once tuned, SVM logloss on test set was 0.6506159245020482
+
+Once tuned, SVM roc_auc on training set was 0.7648163822026828
+
+Once tuned, SVM roc_auc on test set was 0.6624154086413326
+
+-----------------------------------------
+
+************************************************
+
+Model Set 33 - Justice JGRoberts
+
+Random Forest Model Results
+
+09-04-2018 09:44:42 AM
+
+On default settings, Random Forest accuracy score on training data was 0.9113573407202216
+
+On default settings, Random Forest accuracy score on test data was 0.6718146718146718
+
+On default settings, Random Forest logloss on training set was 0.4560783651239645
+
+On default settings, Random Forest logloss on test set was 0.6206521266012296
+
+On default settings, Random Forest roc_auc on training set was 0.9653712480252764
+
+On default settings, Random Forest roc_auc on test set was 0.7135682980277575
+
+The best roc_auc score achieved by GridSearchCV was 0.6343490304709142
+It was achieved by setting max depth to 15 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.8988919667590027
+
+Once tuned, Random Forest accuracy score on test data was 0.637065637065637
+
+Once tuned, Random Forest logloss on training set was 0.4543082237364472
+
+Once tuned, Random Forest logloss on test set was 0.6238885527234729
+
+Once tuned, Random Forest roc_auc on training set was 0.9637124802527646
+
+Once tuned, Random Forest roc_auc on test set was 0.702063550036523
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:45:09 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7686980609418282
+
+On default settings, AdaBoost accuracy score on test data was 0.5791505791505791
+
+On default settings, AdaBoost logloss on training set was 0.6564646737728023
+
+On default settings, AdaBoost logloss on test set was 0.6843708062928842
+
+On default settings, AdaBoost roc_auc on training set was 0.8536848341232227
+
+On default settings, AdaBoost roc_auc on test set was 0.6367177988799612
+
+The best roc_auc score achieved by GridSearchCV was 0.6842264175831834
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.6966759002770083
+
+Once tuned, AdaBoost accuracy score on test data was 0.6447876447876448
+
+Once tuned, AdaBoost logloss on training set was 0.6645597905470828
+
+Once tuned, AdaBoost logloss on test set was 0.6724006269261857
+
+Once tuned, AdaBoost roc_auc on training set was 0.7649091627172196
+
+Once tuned, AdaBoost roc_auc on test set was 0.6890674458242025
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:45:51 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6912917845756397
+It was achieved by setting C to 10 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6551246537396122
+
+Once tuned, SVM accuracy score on test data was 0.6293436293436293
+
+Once tuned, SVM logloss on training set was 0.5878845535035125
+
+Once tuned, SVM logloss on test set was 0.6373800934050577
+
+Once tuned, SVM roc_auc on training set was 0.7845023696682464
+
+Once tuned, SVM roc_auc on test set was 0.6660275140004871
+
+-----------------------------------------
+
+************************************************
+
+Model Set 34 - Justice SAAlito
+
+Random Forest Model Results
+
+09-04-2018 09:46:27 AM
+
+On default settings, Random Forest accuracy score on training data was 0.823953823953824
+
+On default settings, Random Forest accuracy score on test data was 0.6184738955823293
+
+On default settings, Random Forest logloss on training set was 0.4463550156342297
+
+On default settings, Random Forest logloss on test set was 0.6214062628893573
+
+On default settings, Random Forest roc_auc on training set was 0.9806114839671887
+
+On default settings, Random Forest roc_auc on test set was 0.6611142022534428
+
+The best roc_auc score achieved by GridSearchCV was 0.6926406926406926
+It was achieved by setting max depth to 25 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.9668109668109668
+
+Once tuned, Random Forest accuracy score on test data was 0.6104417670682731
+
+Once tuned, Random Forest logloss on training set was 0.30430291633440465
+
+Once tuned, Random Forest logloss on test set was 0.6171531834220991
+
+Once tuned, Random Forest roc_auc on training set was 0.9998908713919354
+
+Once tuned, Random Forest roc_auc on test set was 0.6593058839894282
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:46:52 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.784992784992785
+
+On default settings, AdaBoost accuracy score on test data was 0.6224899598393574
+
+On default settings, AdaBoost logloss on training set was 0.6516934389712437
+
+On default settings, AdaBoost logloss on test set was 0.6814284192309256
+
+On default settings, AdaBoost roc_auc on training set was 0.8577281242611083
+
+On default settings, AdaBoost roc_auc on test set was 0.6361455000695507
+
+The best roc_auc score achieved by GridSearchCV was 0.6970234805398551
+It was achieved by setting learning_rate to 0.01 and n_estimators to 600
+
+Once tuned, AdaBoost accuracy score on training data was 0.7128427128427128
+
+Once tuned, AdaBoost accuracy score on test data was 0.6546184738955824
+
+Once tuned, AdaBoost logloss on training set was 0.6538306411412309
+
+Once tuned, AdaBoost logloss on test set was 0.6686818016377093
+
+Once tuned, AdaBoost roc_auc on training set was 0.7796602462668921
+
+Once tuned, AdaBoost roc_auc on test set was 0.6592015579357351
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:47:29 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.673768693240628
+It was achieved by setting C to 100 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.823953823953824
+
+Once tuned, SVM accuracy score on test data was 0.5983935742971888
+
+Once tuned, SVM logloss on training set was 0.4546029785151378
+
+Once tuned, SVM logloss on test set was 0.65140365255665
+
+Once tuned, SVM roc_auc on training set was 0.8983512486131572
+
+Once tuned, SVM roc_auc on test set was 0.6363889275281681
+
+-----------------------------------------
+
+************************************************
+
+Model Set 35 - Justice SSotomayor
+
+Random Forest Model Results
+
+09-04-2018 09:48:02 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8699186991869918
+
+On default settings, Random Forest accuracy score on test data was 0.6420454545454546
+
+On default settings, Random Forest logloss on training set was 0.43098112988529513
+
+On default settings, Random Forest logloss on test set was 0.6435386603883803
+
+On default settings, Random Forest roc_auc on training set was 0.972520908004779
+
+On default settings, Random Forest roc_auc on test set was 0.6152892561983471
+
+The best roc_auc score achieved by GridSearchCV was 0.6626016260162602
+It was achieved by setting max depth to 25 and n_estimators to 1000
+
+Once tuned, Random Forest accuracy score on training data was 0.9695121951219512
+
+Once tuned, Random Forest accuracy score on test data was 0.6477272727272727
+
+Once tuned, Random Forest logloss on training set was 0.29038638551180307
+
+Once tuned, Random Forest logloss on test set was 0.6450084296152779
+
+Once tuned, Random Forest roc_auc on training set was 1.0
+
+Once tuned, Random Forest roc_auc on test set was 0.6347107438016529
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:48:20 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7886178861788617
+
+On default settings, AdaBoost accuracy score on test data was 0.6477272727272727
+
+On default settings, AdaBoost logloss on training set was 0.6585426632183063
+
+On default settings, AdaBoost logloss on test set was 0.6841196453573616
+
+On default settings, AdaBoost roc_auc on training set was 0.8552076744676365
+
+On default settings, AdaBoost roc_auc on test set was 0.5979338842975207
+
+The best roc_auc score achieved by GridSearchCV was 0.6553526953859561
+It was achieved by setting learning_rate to 0.01 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.6605691056910569
+
+Once tuned, AdaBoost accuracy score on test data was 0.6079545454545454
+
+Once tuned, AdaBoost logloss on training set was 0.6219311002429796
+
+Once tuned, AdaBoost logloss on test set was 0.6652933536177961
+
+Once tuned, AdaBoost roc_auc on training set was 0.6873111251669126
+
+Once tuned, AdaBoost roc_auc on test set was 0.5851239669421487
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:48:38 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6512045813278508
+It was achieved by setting C to 5 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6219512195121951
+
+Once tuned, SVM accuracy score on test data was 0.625
+
+Once tuned, SVM logloss on training set was 0.5706959616867473
+
+Once tuned, SVM logloss on test set was 0.6575235415788453
+
+Once tuned, SVM roc_auc on training set was 0.7727352589781432
+
+Once tuned, SVM roc_auc on test set was 0.584435261707989
+
+-----------------------------------------
+
+************************************************
+
+Model Set 36 - Justice EKagan
+
+Random Forest Model Results
+
+09-04-2018 09:49:06 AM
+
+On default settings, Random Forest accuracy score on training data was 0.8995098039215687
+
+On default settings, Random Forest accuracy score on test data was 0.6503496503496503
+
+On default settings, Random Forest logloss on training set was 0.42182016321053856
+
+On default settings, Random Forest logloss on test set was 0.636012668838343
+
+On default settings, Random Forest roc_auc on training set was 0.990697094400798
+
+On default settings, Random Forest roc_auc on test set was 0.6291322314049588
+
+The best roc_auc score achieved by GridSearchCV was 0.6887254901960784
+It was achieved by setting max depth to 25 and n_estimators to 500
+
+Once tuned, Random Forest accuracy score on training data was 0.9926470588235294
+
+Once tuned, Random Forest accuracy score on test data was 0.6993006993006993
+
+Once tuned, Random Forest logloss on training set was 0.282623546275009
+
+Once tuned, Random Forest logloss on test set was 0.6322434899915585
+
+Once tuned, Random Forest roc_auc on training set was 1.0
+
+Once tuned, Random Forest roc_auc on test set was 0.6460743801652893
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:49:25 AM
+
+On default settings, AdaBoost accuracy score on training data was 0.7965686274509803
+
+On default settings, AdaBoost accuracy score on test data was 0.6153846153846154
+
+On default settings, AdaBoost logloss on training set was 0.6469204484143665
+
+On default settings, AdaBoost logloss on test set was 0.6814136528725561
+
+On default settings, AdaBoost roc_auc on training set was 0.8859583489213119
+
+On default settings, AdaBoost roc_auc on test set was 0.6102272727272726
+
+The best roc_auc score achieved by GridSearchCV was 0.6488093628094981
+It was achieved by setting learning_rate to 0.001 and n_estimators to 300
+
+Once tuned, AdaBoost accuracy score on training data was 0.6397058823529411
+
+Once tuned, AdaBoost accuracy score on test data was 0.6153846153846154
+
+Once tuned, AdaBoost logloss on training set was 0.6373456032312115
+
+Once tuned, AdaBoost logloss on test set was 0.6496162062965471
+
+Once tuned, AdaBoost roc_auc on training set was 0.6401421623643845
+
+Once tuned, AdaBoost roc_auc on test set was 0.5954545454545453
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:49:38 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6717088654734186
+It was achieved by setting C to 1 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.5955882352941176
+
+Once tuned, SVM accuracy score on test data was 0.6153846153846154
+
+Once tuned, SVM logloss on training set was 0.5838444721370255
+
+Once tuned, SVM logloss on test set was 0.6499616553468985
+
+Once tuned, SVM roc_auc on training set was 0.7631874298540966
+
+Once tuned, SVM roc_auc on test set was 0.6132231404958678
+
+-----------------------------------------
+
+************************************************
+
+Model Set 37 - Justice NMGorsuch
+
+Random Forest Model Results
+
+09-04-2018 09:49:59 AM
+
+On default settings, Random Forest accuracy score on training data was 1.0
+
+On default settings, Random Forest accuracy score on test data was 0.7916666666666666
+
+On default settings, Random Forest logloss on training set was 0.19932168065545874
+
+On default settings, Random Forest logloss on test set was 0.5917426964920478
+
+On default settings, Random Forest roc_auc on training set was 1.0
+
+On default settings, Random Forest roc_auc on test set was 0.6875
+
+The best roc_auc score achieved by GridSearchCV was 0.6724137931034483
+It was achieved by setting max depth to 5 and n_estimators to 250
+
+Once tuned, Random Forest accuracy score on training data was 0.8620689655172413
+
+Once tuned, Random Forest accuracy score on test data was 0.7083333333333334
+
+Once tuned, Random Forest logloss on training set was 0.4476564968095931
+
+Once tuned, Random Forest logloss on test set was 0.608066443251527
+
+Once tuned, Random Forest roc_auc on training set was 0.9948519948519948
+
+Once tuned, Random Forest roc_auc on test set was 0.6875
+
+-----------------------------------------
+
+AdaBoost Model Results
+
+09-04-2018 09:50:09 AM
+
+On default settings, AdaBoost accuracy score on training data was 1.0
+
+On default settings, AdaBoost accuracy score on test data was 0.625
+
+On default settings, AdaBoost logloss on training set was 0.35947001110341076
+
+On default settings, AdaBoost logloss on test set was 0.6182597223826587
+
+On default settings, AdaBoost roc_auc on training set was 1.0
+
+On default settings, AdaBoost roc_auc on test set was 0.69921875
+
+The best roc_auc score achieved by GridSearchCV was 0.7616858237547892
+It was achieved by setting learning_rate to 0.001 and n_estimators to 100
+
+Once tuned, AdaBoost accuracy score on training data was 0.7413793103448276
+
+Once tuned, AdaBoost accuracy score on test data was 0.5
+
+Once tuned, AdaBoost logloss on training set was 0.5127569691867113
+
+Once tuned, AdaBoost logloss on test set was 0.7516045893716959
+
+Once tuned, AdaBoost roc_auc on training set was 0.7664092664092663
+
+Once tuned, AdaBoost roc_auc on test set was 0.53125
+
+-----------------------------------------
+
+Support Vector Machine Results
+
+09-04-2018 09:50:09 AM
+
+The best roc_auc score achieved by GridSearchCV was 0.6689655172413793
+It was achieved by setting C to 1 and kernel type to rbf
+
+Once tuned, SVM accuracy score on training data was 0.6379310344827587
+
+Once tuned, SVM accuracy score on test data was 0.6666666666666666
+
+Once tuned, SVM logloss on training set was 0.44289670518977386
+
+Once tuned, SVM logloss on test set was 0.6428583979480149
+
+Once tuned, SVM roc_auc on training set was 0.9716859716859717
+
+Once tuned, SVM roc_auc on test set was 0.6015625
+
+-----------------------------------------
+
+Justice-based test accuracy: 0.6699029126213593
+
+Justice-based test AUC: 0.7270239164848329
+
+Justice-based test log-loss: 0.6122016961826667
+
+Justice-based test confusion Matrix: [[628 422]
+ [292 821]]
+
+Based on 1050 conservative test decsions and 1113 liberal ones (0.4854368932038835 conservative):
+Conservatism Precision: 0.6826086956521739
+Conservatism Recall: 0.5980952380952381
+Conservatism F1: 0.6375634517766497
+Liberalism Precision: 0.6604987932421561
+Liberalism Recall: 0.7376460017969452
+Liberalism F1: 0.6969439728353142

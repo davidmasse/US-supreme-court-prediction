@@ -1,0 +1,5 @@
+.DS_Store
+.ipynb_checkpoints
+__pycache__
+Martin_Quinn_data.xlsx
+Martin_Quinn_codebook.pdf

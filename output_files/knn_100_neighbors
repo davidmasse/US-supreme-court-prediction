@@ -1,0 +1,40 @@
+Last login: Tue Sep  4 15:33:35 on ttys000
+Davids-MacBook-Air:SC DM$ python3 -i knn.py
+(75096, 474)
+knn.py:85: SettingWithCopyWarning: 
+A value is trying to be set on a copy of a slice from a DataFrame.
+Try using .loc[row_indexer,col_indexer] = value instead
+
+See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stable/indexing.html#indexing-view-versus-copy
+  full_cases_data[c] = full_cases_data[c].astype('category')
+
+Case-based train accuracy:  0.6659519068770102
+
+Case-based test accuracy:  0.6527331189710611
+
+Case-based train AUC:  0.7305124112060021
+
+Case-based test AUC:  0.7287258661171264
+
+Case-based train log-loss:  0.6114665705327526
+
+Case-based test log-loss:  0.6124691986751469
+
+Case-based test confusion Matrix:
+ [[623 437]
+ [319 798]]
+
+Based on  1060  conservative test decsions and  1117  liberal ones ( 0.4869085898024805  conservative):
+
+Conservatism Precision:  0.6613588110403397 
+Conservatism Recall:  0.5877358490566038 
+Conservatism F1:  0.6223776223776224
+
+Liberalism Precision:  0.6461538461538462 
+Conservatism Recall:  0.7144136078782453 
+Liberalism F1:  0.6785714285714286
+Traceback (most recent call last):
+  File "knn.py", line 759, in <module>
+    fhand.close()
+NameError: name 'fhand' is not defined
+>>> 
